@@ -46,6 +46,10 @@ class ThankYou extends MusicBeatState
 		txt.screenCenter(Y);
 		add(txt);
 		
+		#if mobileC
+		addVirtualPad(NONE, A_B);
+		#end
+			
 		FlxTween.angle(OrigamiLogo, OrigamiLogo.angle, -10, 2, {ease: FlxEase.quartInOut});
 		
 		new FlxTimer().start(2, function(tmr:FlxTimer)
