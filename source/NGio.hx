@@ -90,7 +90,7 @@ class NGio
 
 	function onNGLogin():Void
 	{
-		trace('logged in! user:${NG.core.user.name}');
+		/*trace('logged in! user:${NG.core.user.name}');
 		isLoggedIn = true;
 		FlxG.save.data.sessionId = NG.core.sessionId;
 		// FlxG.save.flush();
@@ -148,7 +148,7 @@ class NGio
 
 	inline static public function postScore(score:Int = 0, song:String)
 	{
-		if (isLoggedIn)
+		/*if (isLoggedIn)
 		{
 			for (id in NG.core.scoreBoards.keys())
 			{
@@ -161,14 +161,14 @@ class NGio
 
 				// trace('loaded scoreboard id:$id, name:${board.name}');
 			}
-		}
+		}*/
 	}
 
 	function onNGScoresFetch():Void
 	{
-		scoreboardsLoaded = true;
+	//	scoreboardsLoaded = true;
 
-		ngScoresLoaded.dispatch();
+	//	ngScoresLoaded.dispatch();
 		/* 
 			for (score in NG.core.scoreBoards.get(8737).scores)
 			{
@@ -185,17 +185,18 @@ class NGio
 
 	inline static public function logEvent(event:String)
 	{
-		NG.core.calls.event.logEvent(event).send();
-		trace('should have logged: ' + event);
+//		NG.core.calls.event.logEvent(event).send();
+//		trace('should have logged: ' + event);
 	}
 
 	inline static public function unlockMedal(id:Int)
 	{
-		if (isLoggedIn)
+		/*if (isLoggedIn)
 		{
 			var medal = NG.core.medals.get(id);
 			if (!medal.unlocked)
 				medal.sendUnlock();
 		}
-	}
+	}*/
 }
+#end
