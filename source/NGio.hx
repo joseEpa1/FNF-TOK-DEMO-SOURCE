@@ -1,3 +1,4 @@
+#if newgrounds
 package;
 
 import flixel.FlxG;
@@ -35,7 +36,7 @@ class NGio
 
 	public static function noLogin(api:String)
 	{
-		trace('INIT NOLOGIN');
+		/*trace('INIT NOLOGIN');
 		GAME_VER = "v" + Application.current.meta.get('version');
 
 		if (api.length != 0)
@@ -55,12 +56,12 @@ class NGio
 
 				call.send();
 			});
-		}
+		}*/
 	}
 
 	public function new(api:String, encKey:String, ?sessionId:String)
 	{
-		trace("connecting to newgrounds");
+		/*trace("connecting to newgrounds");
 
 		NG.createAndCheckSession(api, sessionId);
 
@@ -74,17 +75,17 @@ class NGio
 		{
 			/* a session_id was found in the loadervars, this means the user is playing on newgrounds.com
 			 * and we should login shortly. lets wait for that to happen
-			 */
+			 
 			trace("attempting login");
 			NG.core.onLogin.add(onNGLogin);
 		}
 		else
 		{
 			/* They are NOT playing on newgrounds.com, no session id was found. We must start one manually, if we want to.
-			 * Note: This will cause a new browser window to pop up where they can log in to newgrounds
-			 */
+                	 * Note: This will cause a new browser window to pop up where they can log in to newgrounds
+			 
 			NG.core.requestLogin(onNGLogin);
-		}
+		}*/
 	}
 
 	function onNGLogin():Void
